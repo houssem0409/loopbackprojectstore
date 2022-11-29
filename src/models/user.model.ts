@@ -1,4 +1,4 @@
-import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Entity, hasMany, model, property} from '@loopback/repository';
 import {Order} from './order.model';
 
 @model()
@@ -31,9 +31,9 @@ export class User extends Entity {
   email: string;
 
   @property({
-    type: 'number',
+    type: 'string',
   })
-  phonenumber: number;
+  phonenumber: string;
 
   @hasMany(() => Order)
   orders: Order[];
